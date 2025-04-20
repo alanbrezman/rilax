@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rilax - Portal de Masajistas</title>
+ 
+</head>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: url('bg.png') no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .overlay {
+    background-color: rgba(255, 255, 255, 0.92);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    min-height: 550px;
+  }
+
+  .left,
+  .right {
+    flex: 1 1 50%;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left img.logo {
+    width: 320px;
+  }
+
+  .left p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    width: 520px;
+  }
+
+  .cta-button {
+    background-color: #e52978;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    width: fit-content;
+    transition: .5s;
+    margin: 20px 0;
+  }
+
+  .cta-button:hover {
+    background-color: #c91e66;
+  }
+
+  .floating-img {
+    animation: float 4s ease-in-out infinite;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 14px;
+    color: #222222;
+    margin: 40px 0;
+  }
+
+  footer a {
+    color: #222222;
+    text-decoration: underline;
+    margin: 0 2px;
+  }
+
+  @media (max-width: 1200px) {
+    /* Ajustes para tablet */
+    .container {
+      flex-direction: column;
+    }
+
+    .left,
+    .right {
+      flex: 1 1 100%;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .left img.logo {
+      margin: 0 auto 20px;
+    }
+
+    .left p {
+      margin: 0 auto 20px;
+      font-size: 16px;
+    }
+
+    .cta-button {
+      margin: 0 auto;
+      font-size: 18px;
+      padding: 18px 25px;
+    }
+
+    .floating-img {
+      max-width: 350px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Ajustes para móvil */
+    .container {
+      flex-direction: column;
+      margin-top: 70px;
+    }
+
+    .left,
+    .right {
+      flex: 1 1 100%;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .left img.logo {
+      width: 250px;
+      margin: 0 auto 20px;
+    }
+
+    .left p {
+      font-size: 14px;
+      margin: 0 auto 20px;
+      padding: 0 15px;
+    }
+
+    .cta-button {
+      margin: 0 auto;
+      font-size: 18px;
+      padding: 18px 25px;
+      width: auto;
+      margin-bottom: 30px;
+    }
+
+    .floating-img {
+      max-width: 300px;
+    }
+  }
+</style>
+
+
+<body>
+    <div class="container">
+      <!-- Lado izquierdo: logo + texto -->
+      <div class="left">
+        <img src="logo.svg" alt="Rilax logo" class="logo">
+        <p>¿Sos masajista profesional? 🌿 Sumate gratis al nuevo portal de masajistas en Buenos Aires y empezá a recibir más consultas, mayor visibilidad y beneficios exclusivos por ser de lxs primerxs en registrarte. ¡No te lo pierdas!</p>
+        <a href="https://docs.google.com/forms/d/1mqFfSNhAisapyTi5Aon_7tGJTIqvrCW6ty8VmyMWaxQ" class="cta-button" target="_blank">QUIERO PUBLICAR</a>
+      </div>
+
+      <!-- Lado derecho: imagen -->
+      <div class="right">
+        <img src="foto.png" class="floating-img" alt="Masaje relajante">
+      </div>
+    </div>
+
+  <footer>
+    © 2025 Rilax | <a href="#">Términos</a> <a href="#">Privacidad</a>
+  </footer>
+
+</body>
+</html>
